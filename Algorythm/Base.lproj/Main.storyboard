@@ -23,7 +23,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bnY-rc-CZN" kind="push" id="Tlj-Vo-bEP"/>
+                                    <segue destination="bnY-rc-CZN" kind="push" identifier="showPlaylistDetail" id="Tlj-Vo-bEP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="594" y="408"/>
+            <point key="canvasLocation" x="516" y="408"/>
         </scene>
         <!--Artists-->
         <scene sceneID="wUi-ax-eF3">
@@ -54,14 +54,30 @@
                     <view key="view" contentMode="scaleToFill" id="PcY-6C-1Ph">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't pressed the button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UR-7R-NaU">
+                                <rect key="frame" x="41" y="273" width="238" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1UR-7R-NaU" firstAttribute="centerX" secondItem="PcY-6C-1Ph" secondAttribute="centerX" id="gtq-1J-Efs"/>
+                            <constraint firstItem="1UR-7R-NaU" firstAttribute="centerY" secondItem="PcY-6C-1Ph" secondAttribute="centerY" id="jsP-6L-Uy7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Artists" id="Yyi-TD-9X5"/>
+                    <connections>
+                        <outlet property="buttonPressLabel" destination="1UR-7R-NaU" id="QfU-2N-THq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJo-Xt-yNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1025" y="408"/>
+            <point key="canvasLocation" x="945" y="408"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Ze-8j-4NB">
