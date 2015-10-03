@@ -16,27 +16,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzC-sJ-bkg">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="giV-i6-IFv">
+                                <rect key="frame" x="60" y="184" width="200" height="200"/>
                                 <animations/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="7PQ-A6-Rar"/>
+                                    <constraint firstAttribute="width" constant="200" id="IOM-Es-Vzt"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzC-sJ-bkg">
+                                <rect key="frame" x="137" y="392" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="bnY-rc-CZN" kind="push" identifier="showPlaylistDetail" id="Tlj-Vo-bEP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.29411764709999999" green="0.6705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="giV-i6-IFv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GFh-z5-QHm"/>
                             <constraint firstItem="yzC-sJ-bkg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LB5-C2-ftE"/>
-                            <constraint firstItem="yzC-sJ-bkg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ktS-ui-gRg"/>
+                            <constraint firstItem="yzC-sJ-bkg" firstAttribute="top" secondItem="giV-i6-IFv" secondAttribute="bottom" constant="8" id="ap5-Y1-qwh"/>
+                            <constraint firstItem="giV-i6-IFv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qLd-gc-pYo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Playlists" id="pMv-fS-oU8"/>
                     <connections>
                         <outlet property="aButton" destination="yzC-sJ-bkg" id="lOa-1v-rIo"/>
+                        <outlet property="playlistImageView0" destination="giV-i6-IFv" id="UNq-Xp-qch"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -99,4 +109,7 @@
             <point key="canvasLocation" x="62" y="408"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholder" width="66" height="73"/>
+    </resources>
 </document>
