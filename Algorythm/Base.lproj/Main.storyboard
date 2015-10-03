@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ULd-Xg-cEh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Playlists-->
@@ -35,7 +36,7 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1764705882352941" green="0.18431372549019609" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="giV-i6-IFv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GFh-z5-QHm"/>
                             <constraint firstItem="yzC-sJ-bkg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LB5-C2-ftE"/>
@@ -65,25 +66,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't pressed the button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UR-7R-NaU">
-                                <rect key="frame" x="41" y="273" width="238" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oRE-ac-rWH">
+                                <rect key="frame" x="0.0" y="64" width="320" height="290"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oRE-ac-rWH" secondAttribute="height" multiplier="32:29" id="hV6-Gw-aGG"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NnT-NP-1Tb">
+                                <rect key="frame" x="0.0" y="234" width="320" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Goes Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06M-k4-qrZ">
+                                        <rect key="frame" x="20" y="10" width="114" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaR-6G-fJM">
+                                        <rect key="frame" x="20" y="39" width="280" height="43"/>
+                                        <animations/>
+                                        <string key="text">This is a collection of my favorite songs to listen to when working out. It's got everything from fast cardio to power workout tunes. All the right fuel to get your engine going.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.30173141891891891" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="06M-k4-qrZ" firstAttribute="top" secondItem="NnT-NP-1Tb" secondAttribute="top" constant="10" id="A1s-Je-bIg"/>
+                                    <constraint firstItem="WaR-6G-fJM" firstAttribute="leading" secondItem="NnT-NP-1Tb" secondAttribute="leading" constant="20" id="IBS-cE-PfT"/>
+                                    <constraint firstItem="WaR-6G-fJM" firstAttribute="top" secondItem="06M-k4-qrZ" secondAttribute="bottom" constant="8" id="IE8-Tq-wbh"/>
+                                    <constraint firstItem="06M-k4-qrZ" firstAttribute="leading" secondItem="NnT-NP-1Tb" secondAttribute="leading" constant="20" id="fzc-dK-8qN"/>
+                                    <constraint firstAttribute="width" secondItem="NnT-NP-1Tb" secondAttribute="height" multiplier="8:3" id="p84-rz-QJi"/>
+                                    <constraint firstAttribute="trailing" secondItem="WaR-6G-fJM" secondAttribute="trailing" constant="20" id="tKR-pm-b9V"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="1UR-7R-NaU" firstAttribute="centerX" secondItem="PcY-6C-1Ph" secondAttribute="centerX" id="gtq-1J-Efs"/>
-                            <constraint firstItem="1UR-7R-NaU" firstAttribute="centerY" secondItem="PcY-6C-1Ph" secondAttribute="centerY" id="jsP-6L-Uy7"/>
+                            <constraint firstAttribute="trailing" secondItem="NnT-NP-1Tb" secondAttribute="trailing" id="5J8-Y2-1oR"/>
+                            <constraint firstItem="NnT-NP-1Tb" firstAttribute="bottom" secondItem="oRE-ac-rWH" secondAttribute="bottom" id="FYo-AR-Ell"/>
+                            <constraint firstItem="oRE-ac-rWH" firstAttribute="leading" secondItem="PcY-6C-1Ph" secondAttribute="leading" id="QjE-EJ-CoX"/>
+                            <constraint firstItem="oRE-ac-rWH" firstAttribute="top" secondItem="d1g-pX-Mu7" secondAttribute="bottom" id="RFS-ET-Wup"/>
+                            <constraint firstAttribute="trailing" secondItem="oRE-ac-rWH" secondAttribute="trailing" id="oAf-u3-bC4"/>
+                            <constraint firstItem="NnT-NP-1Tb" firstAttribute="leading" secondItem="PcY-6C-1Ph" secondAttribute="leading" id="vbg-RD-kuf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Artists" id="Yyi-TD-9X5"/>
-                    <connections>
-                        <outlet property="buttonPressLabel" destination="1UR-7R-NaU" id="QfU-2N-THq"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJo-Xt-yNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,10 +126,12 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ULd-Xg-cEh" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5sc-G6-hjS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="5sc-G6-hjS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.1764705882" green="0.1843137255" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
